@@ -1,40 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MS Web Solutions | Modern Web Development</title>
+    <title>MS Web Solutions | Custom Web Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: #f8fafc; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #050505; 
+            color: #f5f5f5; 
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateY(-5px);
+        }
         .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background: linear-gradient(135deg, #e0e0e0 0%, #737373 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="font-sans antialiased">
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="text-2xl font-bold tracking-tighter">MS.</div>
-        <div class="space-x-6 text-sm font-medium text-slate-300">
-            <a href="#services" class="hover:text-white transition">Services</a>
-            <a href="#portfolio" class="hover:text-white transition">Work</a>
-            <a href="#contact" class="hover:text-white transition">Contact Manee</a>
+<body class="antialiased selection:bg-neutral-800 selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/5 py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tighter">MS.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-neutral-400">
+                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
+                <a href="#process" class="hover:text-white transition-colors">Process</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="px-5 py-2 text-sm font-medium bg-white text-black rounded-full hover:bg-neutral-200 transition">Get a Quote</a>
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-6 py-32 flex flex-col items-center text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-            Building Digital <span class="gradient-text">Masterpieces.</span>
-        </h1>
-        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10">
-            MS Web Solutions delivers fast, responsive, and stunning websites engineered to elevate your brand and drive results.
-        </p>
-        <div class="space-x-4">
-            <a href="#contact" class="bg-indigo-500 hover:bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold transition shadow-lg shadow-indigo-500/30">Start a Project</a>
-            <a href="#portfolio" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-8 py-3 rounded-full font-semibold transition">View Portfolio</a>
+    <section class="relative pt-40 pb-20 md:pt-52 md:pb-32 px-6 md:px-12 max-w-7xl mx-auto flex flex-col items-start">
+        <div class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider uppercase border border-white/10 rounded-full text-neutral-400">
+            Custom Web Design & Development
         </div>
-    </main>
+        <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8 max-w-4xl">
+            We build websites that <span class="gradient-text">drive measurable success.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mb-12 leading-relaxed">
+            Breathing life into businesses with hand-tailored digital experiences. At MS Web Solutions, we focus on creativity, seamless functionality, and high-performing design.
+        </p>
+        <a href="#expertise" class="flex items-center space-x-3 text-sm font-medium hover:text-neutral-300 transition-colors group">
+            <span>Explore our services</span>
+            <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </a>
+    </section>
+
+    <section id="expertise" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 tracking-tight">Digital Expertise.</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass-card p-10 rounded-2xl">
+                <div class="w-12 h-12 mb-6 rounded-full bg-white/5 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Custom Web Design</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">Award-winning website design that forms the foundation of your digital marketing strategy and engages your target audience.</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl">
+                <div class="w-12 h-12 mb-6 rounded-full bg-white/5 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">WordPress Development</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">Expertly crafted custom WordPress solutions offering you the most popular and powerful CMS to easily manage your digital presence.</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl">
+                <div class="w-12 h-12 mb-6 rounded-full bg-white/5 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">e-Commerce Solutions</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">Providing a smooth transition to online sales. We build highly functional storefronts that convert traffic into revenue.</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl">
+                <div class="w-12 h-12 mb-6 rounded-full bg-white/5 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Search Engine Optimization</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">Woven into every build. Our SEO best practices ensure your new website performs at its best in search engine page results.</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-2xl">
+                <div class="w-12 h-12 mb-6 rounded-full bg-white/5 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Conversion Rate Optimization</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">We design custom layouts engineered to convert your web traffic into qualified leads and refine that performance over time.</p>
+            </div>
+            
+            <div class="glass-card p-10 rounded-2xl">
+                <div class="w-12 h-12 mb-6 rounded-full bg-white/5 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Responsive UX/UI</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">Mobile-friendly, accessible, and user-centric designs created through deep discovery and strategic planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
+        <div class="flex flex-col md:flex-row gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Our Process.</h2>
+                <p class="text-neutral-400 text-lg leading-relaxed mb-8">
+                    Our planning process begins with in-depth discovery and research to understand your business requirements and analyze the current user experience. We carry this research through the entire process to help deliver real business growth.
+                </p>
+                <div class="p-6 border border-white/10 rounded-2xl bg-white/[0.01]">
+                    <h4 class="font-bold text-white mb-2">The MS Web Solutions Guarantee</h4>
+                    <p class="text-sm text-neutral-400">
+                        With every web solution we create, we include a full 60-days of post-launch complimentary support to ensure that your new website is firing on all cylinders and performing at peak.
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-1 gap-6">
+                <div class="pb-6 border-b border-white/5">
+                    <span class="text-xs text-neutral-500 font-bold tracking-widest uppercase block mb-2">01. Discovery</span>
+                    <h4 class="text-xl font-semibold text-neutral-200">Research & Strategy</h4>
+                </div>
+                <div class="pb-6 border-b border-white/5">
+                    <span class="text-xs text-neutral-500 font-bold tracking-widest uppercase block mb-2">02. Design</span>
+                    <h4 class="text-xl font-semibold text-neutral-200">UX Architecture & Art Direction</h4>
+                </div>
+                <div class="pb-6 border-b border-white/5">
+                    <span class="text-xs text-neutral-500 font-bold tracking-widest uppercase block mb-2">03. Development</span>
+                    <h4 class="text-xl font-semibold text-neutral-200">Custom Coding & Integration</h4>
+                </div>
+                <div class="pb-6">
+                    <span class="text-xs text-neutral-500 font-bold tracking-widest uppercase block mb-2">04. Deployment</span>
+                    <h4 class="text-xl font-semibold text-neutral-200">Testing & 60-Day Support</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 md:px-12 max-w-7xl mx-auto text-center border-t border-white/5">
+        <h2 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight">Let's make something.</h2>
+        <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10">
+            Ready to undertake a new website design for your product or service? Contact Manee to discuss a custom project plan designed to boost your business.
+        </p>
+        <a href="mailto:hello@mswebsolutions.ca" class="inline-block px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-neutral-200 transition transform hover:scale-105">
+            Start a Project
+        </a>
+    </section>
+
+    <footer class="py-8 px-6 md:px-12 border-t border-white/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500 max-w-7xl mx-auto">
+        <p>&copy; 2026 MS Web Solutions. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+        </div>
+    </footer>
+
 </body>
 </html>
