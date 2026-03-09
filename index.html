@@ -234,7 +234,7 @@
                     <select id="project" name="project" class="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors appearance-none cursor-pointer">
                         <option value="new-build">New Custom Website</option>
                         <option value="rebuild">Website Rebuild / Update</option>
-                        <option value="ecommerce">Online Store</option>
+                        <option value="ecommerce">Development / SEO</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
@@ -255,7 +255,7 @@
 
     <div id="footer-placeholder"></div>
 
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // 1. Load the Header and activate the mobile menu
         fetch('header.html')
@@ -266,7 +266,9 @@
                 // MOBILE MENU LOGIC (Must run AFTER header is loaded)
                 const btn = document.getElementById('menu-btn');
                 const menu = document.getElementById('mobile-menu');
-                const links = document.querySelectorAll('.menu-link');
+                
+                // FIXED: Now grabs ALL links inside the mobile menu, including the button
+                const links = menu.querySelectorAll('a');
 
                 if (btn && menu) {
                     btn.addEventListener('click', () => {
