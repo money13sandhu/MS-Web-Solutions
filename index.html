@@ -26,7 +26,7 @@
 
         <div class="max-w-7xl mx-auto w-full">
             <div data-aos="fade-down" class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider uppercase border border-white/10 rounded-full text-neutral-400 backdrop-blur-sm bg-white/5">
-                Halton Hills & GTA
+                Ontario
             </div>
             <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8 max-w-4xl">
                 We build custom websites that <span class="bg-gradient-to-r from-white to-neutral-500 bg-clip-text text-transparent">grow your business.</span>
@@ -208,23 +208,42 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Load the Header
+        // 1. Load the Header and activate the mobile menu
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                
+                // MOBILE MENU LOGIC (Must run AFTER header is loaded)
+                const btn = document.getElementById('menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                const links = document.querySelectorAll('.menu-link');
+
+                if (btn && menu) {
+                    btn.addEventListener('click', () => {
+                        menu.classList.toggle('hidden');
+                        menu.classList.toggle('flex');
+                    });
+
+                    links.forEach(link => {
+                        link.addEventListener('click', () => {
+                            menu.classList.add('hidden');
+                            menu.classList.remove('flex');
+                        });
+                    });
+                }
             });
 
-        // Load the Footer
+        // 2. Load the Footer
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
 
-        // Initialize Scrolling Animations
+        // 3. Initialize Scrolling Animations
         window.addEventListener('load', () => {
             AOS.init({
                 duration: 800,

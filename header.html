@@ -30,20 +30,3 @@
     <a href="/#contact" class="px-8 py-4 bg-white text-black rounded-full text-lg">Start a Build</a>
 </div>
 
-<script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const links = document.querySelectorAll('.menu-link');
-
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-    });
-
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.add('hidden');
-            menu.classList.remove('flex');
-        });
-    });
-</script>
